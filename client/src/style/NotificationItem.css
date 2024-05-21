@@ -1,0 +1,16 @@
+/* NotificationItem.css */
+
+.notification-item {
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+}
+
+.notification-item-text {
+    margin-bottom: 5px;
+}
+
+.notification-item-time {
+    color: #777;
+    font-size: 14px;
+}
+

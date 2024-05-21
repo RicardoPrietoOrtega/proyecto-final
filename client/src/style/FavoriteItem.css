@@ -1,0 +1,49 @@
+/* FavoriteItem.css */
+
+.favorite-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.favorite-item-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.favorite-item-info {
+    flex: 1;
+}
+
+.favorite-item-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.favorite-item-price {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.favorite-item-remove {
+    padding: 8px 12px;
+    border: none;
+    background-color: #ff4d4d;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.favorite-item-remove:hover {
+    background-color: #e60000;
+}
+

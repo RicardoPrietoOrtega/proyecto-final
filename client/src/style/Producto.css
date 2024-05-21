@@ -1,0 +1,28 @@
+.MuiCard-root {
+  max-width: 345px;
+  margin: auto;
+}
+
+.MuiCardMedia-root {
+  height: 140px;
+}
+
+.MuiCardContent-root {
+  display: flex;
+  flex-direction: column;
+}
+
+.MuiTypography-root {
+  margin-bottom: 16px;
+}
+
+.MuiBox-root {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+}

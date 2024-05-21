@@ -1,0 +1,17 @@
+/* UserInfo.css */
+
+.user-info {
+    margin-bottom: 20px;
+}
+
+.user-info h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.user-info p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #555;
+}

@@ -1,0 +1,29 @@
+.product-view-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.product-image {
+    width: 50%;
+    margin-bottom: 1rem;
+}
+
+.product-image img{
+    height: 700px;
+    margin-bottom: 1rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-details {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+/* Añade estilos adicionales según sea necesario */

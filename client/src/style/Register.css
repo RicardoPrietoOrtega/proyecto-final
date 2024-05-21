@@ -1,0 +1,84 @@
+body {
+  background-color: #7f0079;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.logo {
+  max-width: 30rem;
+  margin: 25px;
+}
+
+.register-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.register-form input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.register-form button {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #6f00ab;
+  color: white;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 770px){
+  .logo img {
+    max-width: 17.4rem;
+    /* Reduce el tamaño del logo */
+    margin: 0px auto;
+    /* Centra el logo */
+  }
+}
+
+/* Media query para dispositivos con ancho de 320px o menos */
+@media only screen and (max-width: 430px) {
+  .register-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100% auto;
+    height: 100% auto;
+  }
+
+  .register-form {
+    width: 250px;
+    /* Reduce el ancho del formulario de inicio de sesión */
+    margin: 0 auto;
+    /* Centra el formulario de inicio de sesión */
+  }
+
+  .logo img {
+    max-width: 15rem;
+    /* Reduce el tamaño del logo */
+    margin: 0px auto;
+    /* Centra el logo */
+  }
+}

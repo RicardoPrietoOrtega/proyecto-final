@@ -1,0 +1,46 @@
+/* UserProfile.css */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.user-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 90rem;
+    height: 40rem;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+.profile-content {
+    max-width: 800px;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logout-button {
+    background: #ff4d4d;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1em;
+    transition: background 0.2s;
+    margin-top: 20px;
+}
+
+.logout-button:hover {
+    background: #cc0000;
+}
