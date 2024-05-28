@@ -1,37 +1,65 @@
-import React from 'react';
+// ProductDetail.js
+import React, { useState } from 'react';
+import { Card, Button, Form } from 'react-bootstrap';
 import '../style/ProductDetail.css';
 
-function ProductDetail({ product }) {
-    const { image, title, material, sizes, colors, description, price } = product;
+const ProductDetail = ({ product }) => {
+  const [selectedColor, setSelectedColor] = useState('');
+  const [selectedSize, setSelectedSize] = useState('');
+  const [quantity, setQuantity] = useState(1);
 
-    return (
-        <div className="productDetailContainer">
-            <img src={image} alt={title} className="productDetailImage" />
-            <div className="productDetailInfo">
-                <h2 className="productDetailTitle">{title}</h2>
-                <p className="productDetailMaterial">{material}</p>
-                <div className="productDetailSizes">
-                    <label>Tallas Disponibles: </label>
-                    <select>
-                        {sizes.map((size, index) => (
-                            <option key={index} value={size}>{size}</option>
-                        ))}
-                    </select>
-                </div>
-                <div className="productDetailColors">
-                    <label>Colores Disponibles: </label>
-                    <div className="colorOptionsContainer">
-                        {colors.map((color, index) => (
-                            <div key={index} className="colorOptionItem" style={{ backgroundColor: color }}></div>
-                        ))}
-                    </div>
-                </div>
-                <p className="productDetailDescription">{description}</p>
-                <p className="productDetailPrice">{price}</p>
-                <button className="addToCartButton">Agregar al Carrito</button>
-            </div>
-        </div>
-    );
+  const handleColorChange = (event) => {
+    setSelectedColor(event.target.value);
+  };
+
+  const handleSizeChange = (event) => {
+    setSelectedSize(event.target.value);
+  };
+
+  const handleQuantityChange = (event) => {
+    setQuantity(event.target.value);
+  };
+
+  return (
+    <Card className="product-detail">
+      <div className="product-image-container">
+        <Card.Img variant="top" src={product.image} alt={product.title} className="product-image" />
+      </div>
+      <Card.Body className="product-details">
+        <Card.Title>{product.title}</Card.Title>
+        <Card.Text><strong>Material:</strong> {product.material}</Card.Text>
+        
+        <Form.Group>
+          <Form.Label>Color:</Form.Label>
+          <Form.Select onChange={handleColorChange}>
+            <option value="">Selecciona un color</option>
+            {product.colors.map((color, index) => (
+              <option key={index} value={color}>{color}</option>
+            ))}
+          </Form.Select>
+        </Form.Group>
+
+        <Form.Group>
+          <Form.Label>Talla:</Form.Label>
+          <Form.Select onChange={handleSizeChange}>
+            <option value="">Selecciona una talla</option>
+            {product.sizes.map((size, index) => (
+              <option key={index} value={size}>{size}</option>
+            ))}
+          </Form.Select>
+        </Form.Group>
+
+        <Form.Group>
+          <Form.Label>Cantidad:</Form.Label>
+          <Form.Control type="number" value={quantity} onChange={handleQuantityChange} />
+        </Form.Group>
+
+        <Card.Text><strong>Descripción:</strong> {product.description}</Card.Text>
+        <Card.Text><strong>Precio:</strong> ${product.price}</Card.Text>
+        <Button variant="primary">Agregar al Carrito</Button>
+      </Card.Body>
+    </Card>
+  );
 }
 
 export default ProductDetail;

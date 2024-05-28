@@ -1,27 +1,43 @@
-import React, { useState, useEffect } from 'react';
-import '../style/Home.css';
+import React from 'react';
 import Navbar from '../components/Navbar';
 import Sidebar from '../components/Sidebar';
 import ProductList from '../components/ProductList';
-import axios from 'axios';
+import Footer from '../components/Footer';
+import '../style/Home.css';
 
 function Home() {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    // Función para obtener los productos desde la API
-    const fetchProducts = async () => {
-      try {
-        const response = await axios.get('http://localhost:5000/products');
-        setProducts(response.data);
-      } catch (error) {
-        console.error('Error al obtener productos:', error);
-      }
-    };
-
-    // Llama a la función para obtener productos cuando el componente se monta
-    fetchProducts();
-  }, []);
+  // Datos estáticos de ejemplo
+  const products = [
+    {
+      id: 1,
+      name: 'Playera Blanca',
+      description: 'Playera blanca de algodón 100%',
+      price: 20,
+      image: 'https://www.forprint.com.mx/wp-content/uploads/2023/01/FORPRINT_GILDAN_64800L_JASPE-800x1000.jpg'
+    },
+    {
+      id: 2,
+      name: 'Gorra Negra',
+      description: 'Gorra negra con diseño moderno',
+      price: 15,
+      image: 'https://www.forprint.com.mx/wp-content/uploads/2023/01/FORPRINT_GILDAN_64800L_JASPE-800x1000.jpg'
+    },
+    {
+      id: 3,
+      name: 'Playera Roja',
+      description: 'Playera roja con estampado',
+      price: 22,
+      image: 'https://www.forprint.com.mx/wp-content/uploads/2023/01/FORPRINT_GILDAN_64800L_JASPE-800x1000.jpg'
+    },
+    {
+      id: 4,
+      name: 'Gorra Azul',
+      description: 'Gorra azul con visera curva',
+      price: 18,
+      image: 'https://www.forprint.com.mx/wp-content/uploads/2023/01/FORPRINT_GILDAN_64800L_JASPE-800x1000.jpg'
+    },
+    // Puedes añadir más productos según sea necesario
+  ];
 
   return (
     <div className="home">
@@ -33,6 +49,7 @@ function Home() {
           <ProductList products={products} />
         </main>
       </div>
+      <Footer />
     </div>
   );
 }

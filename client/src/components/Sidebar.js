@@ -1,19 +1,38 @@
 import React from 'react';
-import '../style/Sidebar.css'; // Asegúrate de tener este archivo en tu proyecto
+import { Card, Form, Button } from 'react-bootstrap';
 
-function Sidebar() {
+const SidebarFilter = () => {
   return (
-    <aside className="sidebar">
-      <h2>Categorías</h2>
-      <ul>
-        <li><a href="/categorias/playeras">Playeras</a></li>
-        <li><a href="/categorias/gorras">Gorras</a></li>
-        <li><a href="/categorias/accesorios">Accesorios</a></li>
-        <li><a href="">Proximamente...</a></li>
-        {/* Añade más categorías según sea necesario */}
-      </ul>
-    </aside>
+    <Card style={{ width: '18rem' }} className="mb-3">
+      <Card.Header>Filtrar Productos</Card.Header>
+      <Card.Body>
+        <Form>
+          <Form.Group controlId="formCategory">
+            <Form.Label>Categoría</Form.Label>
+            <Form.Check type="checkbox" label="Playeras" />
+            <Form.Check type="checkbox" label="Gorras" />
+          </Form.Group>
+
+          <Form.Group controlId="formPriceRange" className="mt-3">
+            <Form.Label>Rango de Precio</Form.Label>
+            <Form.Control type="range" min="0" max="100" />
+          </Form.Group>
+
+          <Form.Group controlId="formSizes" className="mt-3">
+            <Form.Label>Tallas</Form.Label>
+            <Form.Check type="checkbox" label="S" />
+            <Form.Check type="checkbox" label="M" />
+            <Form.Check type="checkbox" label="L" />
+            <Form.Check type="checkbox" label="XL" />
+          </Form.Group>
+
+          <Button variant="primary" type="submit" className="mt-3">
+            Aplicar Filtros
+          </Button>
+        </Form>
+      </Card.Body>
+    </Card>
   );
 }
 
-export default Sidebar;
+export default SidebarFilter;

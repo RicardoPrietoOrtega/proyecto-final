@@ -1,60 +1,42 @@
-.productDetailContainer {
+/* ProductDetail.css */
+
+/* Estilo para el contenedor del detalle del producto */
+.product-detail {
     display: flex;
-    margin: 20px;
-    padding-left: 10rem;
-}
-
-.productDetailImage {
-    width: 50%;
-    object-fit: cover;
-}
-
-.productDetailInfo {
-    margin-left: 4rem;
-}
-
-.productDetailTitle {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.productDetailMaterial,
-.productDetailDescription,
-.productDetailPrice {
-    margin-top: 10px;
-}
-
-.productDetailSizes,
-.productDetailColors {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-}
-
-.colorOptionsContainer {
-    display: flex;
-}
-
-.colorOptionItem {
-    width: 20px;
-    height: 20px;
-    margin-left: 5px;
-}
-
-.addToCartButton {
-    background: #007bff;
-    color: white;
-    margin-top: 2rem;
-    padding: 10px;
-    border: none;
+    flex-direction: row;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    cursor: pointer;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo para el contenedor de la imagen del producto */
+  .product-image-container {
+    width: 40%; /* Porcentaje del ancho total */
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo para la imagen del producto */
+  .product-image {
     width: 100%;
-    font-size: 1em;
-    transition: background 0.2s;
-}
-
-.addToCartButton:hover {
-    background-color: #0056b3;
-}
-
+    height: auto;
+  }
+  
+  /* Estilo para el contenedor de los detalles del producto */
+  .product-details {
+    width: 60%; /* Porcentaje del ancho total */
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo para los elementos dentro del contenedor de los detalles del producto */
+  .product-details > * {
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo para el botón */
+  .product-details button {
+    margin-top: 10px;
+  }
+  
